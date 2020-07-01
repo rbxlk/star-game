@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import utils from './utils.js'
 import './global.css';
 import PlayNumber from './play-number.js';
+import StarDisplay from './star-display.js'
 
 // STAR MATCH - Starting Template
 
@@ -14,9 +15,7 @@ const StarMatch = () => {
       </div>
       <div className="body">
         <div className="left">
-          {utils.range(1, stars).map(starId =>
-            <div key={starId} className="star" />
-          )}
+          <StarDisplay count={stars}/>
         </div>
         <div className="right">
           {utils.range(1, 9).map(number =>
